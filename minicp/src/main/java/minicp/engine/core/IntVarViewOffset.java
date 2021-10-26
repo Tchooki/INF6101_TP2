@@ -67,6 +67,11 @@ public class IntVarViewOffset implements IntVar {
     }
 
     @Override
+    public void propagateOnNotZero(Constraint c) {
+        x.propagateOnNotZero(c);
+    }
+
+    @Override
     public int min() {
         return x.min() + o;
     }
